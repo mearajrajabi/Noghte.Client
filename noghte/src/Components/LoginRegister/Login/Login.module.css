@@ -198,3 +198,7 @@
 .link {
     text-decoration: unset;
 }
+.secondSection p span{
+    color: #107abe;
+    cursor: pointer;
+}
