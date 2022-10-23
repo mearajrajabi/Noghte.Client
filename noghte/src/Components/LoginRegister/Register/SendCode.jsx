@@ -74,7 +74,7 @@ const SendCode = ({ prevRender , nextRender }) => {
                         </div>
                         <div className={sendCode.backBtn}>
                             <button onClick={prevRender}>
-                                <svg class="toggle--icon" width="21" height="21" viewBox="0 0 21 21">
+                                <svg width="21" height="21" viewBox="0 0 21 21">
                                     <path d="M4 7.33L10.03 14l.5.55.5-.55 5.96-6.6-.98-.9-5.98 6.6h1L4.98 6.45z"></path>
                                 </svg>
                                 برگشتن به مرحله ی قبل 

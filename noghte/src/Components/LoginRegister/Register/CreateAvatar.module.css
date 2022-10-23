@@ -53,109 +53,6 @@
 
 /*-------------- Create Section -----------*/
 
-/* .createSection {
-    width: 67.8%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.uploadGroup{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: -70px;
-}
-.displayImage{
-    background-image: url('../../../assets/new-avatar-register.png');
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.iconPreview {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(255, 115, 0);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: white 3px solid;
-    position: relative;
-    bottom: 50px;
-    right: 0px;
-}
-.iconPreview svg{
-    fill: white;
-}
-.imagePreview input[type=file]{
-    cursor: pointer;
-    position:absolute;
-    top: 0;
-    right: 0;
-    z-index: 99;
-    font-size:6.5px;
-    height: 121px;
-    opacity: 0;
-    -moz-opacity: 0;
-    filter:
-    progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-    -webkit-filter:
-    progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-}
-.inputName input{
-    width: 350px;
-    height: 35px;
-    font-family: 'Vazirmatn';
-    font-size: 14px;
-    box-shadow: #626a6eb2 0px 0px 15px ;
-    border: unset;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    outline: unset;
-    padding: 5px 3px;
-}
-.inputName input:focus{
-    font-family: 'Vazirmatn';
-    font-size: 14px;
-    border: unset;
-    box-shadow: #626a6e 0px 0px 15px ;
-}
-.btnSkip{
-    position: relative;
-    top: 100px;
-}
-.btnSkip button{
-    border: unset;
-    color: #626a6ec4;
-    font-family: 'Vazirmatn';
-    font-size: 15px;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-.btnSkip button:hover{
-    background-color: #e3e4e6;
-} */
 .createSection{
     display: flex;
     flex-direction: column;
@@ -179,6 +76,9 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-position: 100% 100%;
 }
 .imagePreview svg{
     width: 15px;
@@ -265,4 +165,26 @@
 }
 .btns span:hover{
     color: #505050; 
+}
+.deleteImage{
+    width: 100px;
+    position: absolute;
+    right: 11rem;
+}
+.deleteImage button{
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(76, 77, 82);
+    font-size: 25px;
+    color: white;
+    border: unset;
+    border-radius: 30%;
+    -webkit-border-radius: 30%;
+    -moz-border-radius: 30%;
+    -ms-border-radius: 30%;
+    -o-border-radius: 30%;
+    cursor: pointer;
+}
+.deleteImage button:hover{
+    background-color: rgb(211, 40, 40);
 }

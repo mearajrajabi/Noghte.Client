@@ -1,25 +1,23 @@
-import { useState , useRef, useEffect} from 'react';
+import { useState} from 'react';
 import createAvatar from './CreateAvatar.module.css';
 
 const CreateAvatar =() =>{
     
-    const [uploadFile, setUploadFile] = useState();
-    const myRef = useRef();
+    const [uploadFile, setUploadFile] = useState(null);
 
-    
     const onChangeInput = (e)=>{
         const reader = new FileReader();
           reader.onload= ()=>{
-            setUploadFile(reader.result);
-            myRef.current.src= uploadFile;
-            console.log(uploadFile);
+            setUploadFile(reader.result); 
         };
-         
         reader.readAsDataURL(e.target.files[0]);
     }
 
+    const dltImage = () =>{
+        setUploadFile(null);
+    }
 
-
+    console.log(uploadFile); 
     return(
          <div className={createAvatar.createAvatar}>
                 <div className={createAvatar.colorPart}>
@@ -37,12 +35,15 @@ const CreateAvatar =() =>{
                 </div>
                 <div className={createAvatar.createSection}>
                     <div className={createAvatar.imagePreview}>
-                        <input type="file" accept='image/*' className={createAvatar.uploadImage} onChange={onChangeInput} />
-                        <img className={createAvatar.displayImage} ref={myRef}  src={require('../../../assets/new-avatar-register.png')}/>
+                        <input type="file" accept='image/*' className={createAvatar.uploadImage} onChange={onChangeInput}  
+                            title="عکس شما" />
+                        <img className={createAvatar.displayImage}  src={uploadFile === null? require('../../../assets/new-avatar-register.png') : uploadFile}/>
                         <svg width="15" height="15" viewBox="0 0 448 448">
                             <path d="m272 184c-4.417969 0-8-3.582031-8-8v-176h-80v176c0 4.417969-3.582031 8-8 8h-176v80h176c4.417969 0 8 3.582031 8 8v176h80v-176c0-4.417969 3.582031-8 8-8h176v-80zm0 0"></path>
                         </svg>
-                        
+                        <div className={createAvatar.deleteImage}>
+                            <button onClick={dltImage}><span className='fa fa-trash'></span></button>
+                        </div>
                     </div>
                     <div className={createAvatar.writeName}>
                         <input type="text" placeholder='نام خود را وارد کنید ...' className={createAvatar.inputName} />
